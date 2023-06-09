@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+	.form-container 
+	{
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+
+	.form-container form button
+	{
+	  display: flex;
+	  align-items: flex-start;
+	  margin-left: auto;
+	}
+  </style>
+</head>
+<body>
+    <h3>Add Questions to create a survey</h3>
+
+	<form action="submit_draft_surveys.php" method="post">
+		<label for="inputField">Enter survey name:</label>
+		<input type="text" name="f1"/>
+		<br><br>
+		<label for="inputField1">Enter targeted user's to publish</label>
+	    <select size="1" name="target">
+			<option value="students">Students</option>
+			<option value="teachers">Teachers</option>
+		</select>
+		<br><br>
+        <button style="background-color: black; color: white;" name="s1" type="submit" value="submit">Submit</button>
+	    <button style="background-color: black; color: white;" name="s1" type="submit" value="draft">Save Draft</button>
+    </form><br>
+	
+	<div class="form-container">
+    <form action="add_question.php" method="post">
+        <div class="question">
+		<label>Enter question:</label>
+		<br><br><textarea rows="5" cols="50" name="question"></textarea>
+		<br><br><label>Select question type:</label>
+		<select size="1" name="type">
+			<option value="text">text</option>
+			<option value="radio">radio</option>
+			<option value="checkbox">checkbox</option>
+			<option value="number">number</option>
+			<option value="textarea">textarea</option>
+		</select>
+        <button type="submit">Add</button>
+    </form><br>
+	</div>
+	
+</body>
+</html>
